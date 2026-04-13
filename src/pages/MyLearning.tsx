@@ -10,16 +10,16 @@ export default function MyLearning() {
       <h1 className="text-2xl font-black text-foreground mb-6">My Learning</h1>
       
       <Tabs defaultValue="ongoing" className="w-full">
-        <TabsList className="w-full bg-muted p-1 rounded-xl mb-6">
+        <TabsList className="w-full h-12 bg-muted p-1 rounded-xl mb-6 flex items-center">
           <TabsTrigger 
             value="ongoing" 
-            className="flex-1 rounded-lg transition-all data-[state=active]:bg-academy-blue data-[state=active]:text-white text-muted-foreground font-bold"
+            className="flex-1 h-full rounded-lg transition-all data-active:!bg-academy-blue data-active:!text-white text-muted-foreground font-bold"
           >
             Ongoing
           </TabsTrigger>
           <TabsTrigger 
             value="completed" 
-            className="flex-1 rounded-lg transition-all data-[state=active]:bg-academy-blue data-[state=active]:text-white text-muted-foreground font-bold"
+            className="flex-1 h-full rounded-lg transition-all data-active:!bg-academy-blue data-active:!text-white text-muted-foreground font-bold"
           >
             Completed
           </TabsTrigger>

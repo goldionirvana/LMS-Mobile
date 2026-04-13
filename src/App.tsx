@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import BottomNav from './components/BottomNav';
 import Home from './pages/Home';
 import CourseDetail from './pages/CourseDetail';
+import Courses from './pages/Courses';
 import MyLearning from './pages/MyLearning';
 import Profile from './pages/Profile';
 import QuizView from './pages/QuizView';
@@ -42,7 +43,7 @@ export default function App() {
             <Route path="/courses" element={
               <>
                 <Navbar />
-                <div className="p-8 text-center text-muted-foreground">Courses Page (Coming Soon)</div>
+                <Courses />
                 <BottomNav />
               </>
             } />

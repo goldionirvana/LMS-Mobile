@@ -55,22 +55,22 @@ export default function CourseDetail() {
       {/* Content */}
       <div className="px-6 py-8">
         <Tabs defaultValue="curriculum" className="w-full">
-          <TabsList className="w-full bg-muted p-1 rounded-xl mb-8">
+          <TabsList className="w-full h-12 bg-muted p-1 rounded-xl mb-8 flex items-center">
             <TabsTrigger 
               value="about" 
-              className="flex-1 rounded-lg transition-all data-[state=active]:bg-academy-blue data-[state=active]:text-guide-gold text-muted-foreground font-bold"
+              className="flex-1 h-full rounded-lg transition-all data-active:!bg-academy-blue data-active:!text-guide-gold text-muted-foreground font-bold"
             >
               About
             </TabsTrigger>
             <TabsTrigger 
               value="curriculum" 
-              className="flex-1 rounded-lg transition-all data-[state=active]:bg-academy-blue data-[state=active]:text-guide-gold text-muted-foreground font-bold"
+              className="flex-1 h-full rounded-lg transition-all data-active:!bg-academy-blue data-active:!text-guide-gold text-muted-foreground font-bold"
             >
               Curriculum
             </TabsTrigger>
             <TabsTrigger 
               value="reviews" 
-              className="flex-1 rounded-lg transition-all data-[state=active]:bg-academy-blue data-[state=active]:text-guide-gold text-muted-foreground font-bold"
+              className="flex-1 h-full rounded-lg transition-all data-active:!bg-academy-blue data-active:!text-guide-gold text-muted-foreground font-bold"
             >
               Reviews
             </TabsTrigger>
