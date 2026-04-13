@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
   
   --color-academy-blue: #001F4B;
   --color-guide-gold: #C5A03F;
@@ -32,12 +33,12 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased selection:bg-guide-gold/20;
   }
 }
 
 :root {
-    --background: #FFFFFF;
+    --background: #FDFDFD;
     --foreground: #001F4B;
     --card: #FFFFFF;
     --card-foreground: #001F4B;
@@ -47,15 +48,27 @@
     --primary-foreground: #FFFFFF;
     --secondary: #001F4B;
     --secondary-foreground: #FFFFFF;
-    --muted: #F1F5F9;
+    --muted: #F8FAFC;
     --muted-foreground: #64748B;
     --accent: #C5A03F;
     --accent-foreground: #FFFFFF;
     --destructive: oklch(0.577 0.245 27.325);
-    --border: #E2E8F0;
-    --input: #E2E8F0;
+    --border: #F1F5F9;
+    --input: #F1F5F9;
     --ring: #C5A03F;
-    --radius: 1rem;
+    --radius: 1.25rem;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+  .text-display {
+    @apply font-display tracking-tight;
+  }
+  .text-mono {
+    @apply font-mono tracking-tighter;
+  }
 }
 
 @layer base {
