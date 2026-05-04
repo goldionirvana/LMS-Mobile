@@ -3,11 +3,11 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 
 const menuItems = [
-  { icon: User, label: 'Edit Profile' },
-  { icon: Bell, label: 'Notifications' },
-  { icon: CreditCard, label: 'Payment Methods' },
-  { icon: Shield, label: 'Security' },
-  { icon: Settings, label: 'Settings' },
+  { icon: User, label: 'Edit Profil' },
+  { icon: Bell, label: 'Notifikasi' },
+  { icon: CreditCard, label: 'Metode Pembayaran' },
+  { icon: Shield, label: 'Keamanan' },
+  { icon: Settings, label: 'Pengaturan' },
 ];
 
 export default function Profile() {
@@ -16,10 +16,10 @@ export default function Profile() {
       <div className="px-6 py-10 bg-academy-blue text-white rounded-b-[40px] text-center mb-8 shadow-xl">
         <Avatar className="w-24 h-24 border-4 border-guide-gold/20 mx-auto mb-4">
           <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>JD</AvatarFallback>
+          <AvatarFallback>GA</AvatarFallback>
         </Avatar>
-        <h1 className="text-xl font-black">John Doe</h1>
-        <p className="text-white/60 text-sm">john.doe@example.com</p>
+        <h1 className="text-xl font-black">Goldio</h1>
+        <p className="text-white/60 text-sm">goldio@gacoanacademy.com</p>
       </div>
 
       <div className="px-6 space-y-2">
@@ -45,7 +45,7 @@ export default function Profile() {
             <div className="w-10 h-10 rounded-2xl bg-red-50 flex items-center justify-center">
               <LogOut className="w-5 h-5" />
             </div>
-            <span className="font-bold">Logout</span>
+            <span className="font-bold">Keluar</span>
           </div>
         </button>
       </div>

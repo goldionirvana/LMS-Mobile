@@ -8,6 +8,8 @@
   
   --color-academy-blue: #001F4B;
   --color-guide-gold: #C5A03F;
+  --color-fresh-teal: #2DD4BF;
+  
   --color-card-muted: var(--muted);
   --color-text-muted: var(--muted-foreground);
 
@@ -33,12 +35,12 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground antialiased selection:bg-guide-gold/20;
+    @apply bg-[#F8FAFC] text-foreground antialiased selection:bg-guide-gold/20;
   }
 }
 
 :root {
-    --background: #FDFDFD;
+    --background: #F8FAFC;
     --foreground: #001F4B;
     --card: #FFFFFF;
     --card-foreground: #001F4B;
@@ -48,26 +50,33 @@
     --primary-foreground: #FFFFFF;
     --secondary: #001F4B;
     --secondary-foreground: #FFFFFF;
-    --muted: #F8FAFC;
+    --muted: #F1F5F9;
     --muted-foreground: #64748B;
     --accent: #C5A03F;
     --accent-foreground: #FFFFFF;
     --destructive: oklch(0.577 0.245 27.325);
-    --border: #F1F5F9;
-    --input: #F1F5F9;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
     --ring: #C5A03F;
-    --radius: 1.25rem;
+    --radius: 1.5rem;
 }
 
 @layer utilities {
-  .glass {
-    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-sm;
+  }
+  .glass-dark {
+    @apply bg-academy-blue/90 backdrop-blur-2xl border border-white/10;
   }
   .text-display {
-    @apply font-display tracking-tight;
+    @apply font-display tracking-tight leading-tight;
   }
   .text-mono {
     @apply font-mono tracking-tighter;
+  }
+  .bg-mesh {
+    background-image: radial-gradient(at 0% 0%, hsla(215, 94%, 15%, 0.03) 0, transparent 50%),
+                      radial-gradient(at 100% 0%, hsla(43, 52%, 51%, 0.03) 0, transparent 50%);
   }
 }
 

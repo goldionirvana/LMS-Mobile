@@ -7,7 +7,7 @@ export default function MyLearning() {
 
   return (
     <div className="pb-24 px-4 py-6 bg-background min-h-screen text-foreground">
-      <h1 className="text-2xl font-black text-foreground mb-6">My Learning</h1>
+      <h1 className="text-2xl font-black text-foreground mb-6">Belajar Saya</h1>
       
       <Tabs defaultValue="ongoing" className="w-full">
         <TabsList className="w-full h-12 bg-muted p-1 rounded-xl mb-6 flex items-center">
@@ -15,13 +15,13 @@ export default function MyLearning() {
             value="ongoing" 
             className="flex-1 h-full rounded-lg transition-all data-active:!bg-academy-blue data-active:!text-white text-muted-foreground font-bold"
           >
-            Ongoing
+            Sedang Berjalan
           </TabsTrigger>
           <TabsTrigger 
             value="completed" 
             className="flex-1 h-full rounded-lg transition-all data-active:!bg-academy-blue data-active:!text-white text-muted-foreground font-bold"
           >
-            Completed
+            Selesai
           </TabsTrigger>
         </TabsList>
 
@@ -36,14 +36,14 @@ export default function MyLearning() {
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-muted-foreground text-sm">You haven't started any courses yet.</p>
+              <p className="text-muted-foreground text-sm">Anda belum memulai kursus apa pun.</p>
             </div>
           )}
         </TabsContent>
 
         <TabsContent value="completed" className="mt-0">
           <div className="text-center py-12">
-            <p className="text-muted-foreground text-sm">No completed courses yet.</p>
+            <p className="text-muted-foreground text-sm">Belum ada kursus yang selesai.</p>
           </div>
         </TabsContent>
       </Tabs>

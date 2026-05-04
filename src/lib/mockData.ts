@@ -1,59 +1,59 @@
 import { Course, Module, Quiz, KMSEntry } from '../types';
 
+export const CATEGORIES = ['Semua', 'Operasional', 'Teknis', 'Supervisi'];
+
 export const COURSES: Course[] = [
   {
     id: 'mos',
     title: 'Managerial Operational Skill (MOS)',
-    instructor: 'Operations Dept',
+    instructor: 'Dep. Operasional',
     thumbnail: 'https://picsum.photos/seed/manager/800/450',
     price: 0,
     rating: 4.9,
     students: 120,
-    duration: '40h',
-    category: 'Operational',
-    description: 'Advanced managerial skills for operational excellence.',
+    duration: '40 jam',
+    category: 'Operasional',
+    description: 'Keterampilan manajerial tingkat lanjut untuk keunggulan operasional.',
     progress: 65,
   },
   {
     id: 'tos',
     title: 'Technical Operational Skill (TOS)',
-    instructor: 'Technical Team',
+    instructor: 'Tim Teknis',
     thumbnail: 'https://picsum.photos/seed/tech/800/450',
     price: 0,
     rating: 4.8,
     students: 350,
-    duration: '30h',
-    category: 'Technical',
-    description: 'Core technical skills required for daily operations.',
+    duration: '30 jam',
+    category: 'Teknis',
+    description: 'Keterampilan teknis inti yang diperlukan untuk operasional harian.',
     progress: 100,
   },
   {
     id: 'sos',
     title: 'Supervisory Operational Skill (SOS)',
-    instructor: 'HR Training',
+    instructor: 'Pelatihan HR',
     thumbnail: 'https://picsum.photos/seed/supervise/800/450',
     price: 0,
     rating: 4.7,
     students: 200,
-    duration: '25h',
-    category: 'Supervisory',
-    description: 'Developing leadership and supervisory capabilities.',
+    duration: '25 jam',
+    category: 'Supervisi',
+    description: 'Mengembangkan kapabilitas kepemimpinan dan supervisi.',
   },
   {
     id: 'stocker',
-    title: 'Stocker Professional Training',
-    instructor: 'Logistics Team',
+    title: 'Pelatihan Profesional Stocker',
+    instructor: 'Tim Logistik',
     thumbnail: 'https://picsum.photos/seed/stock/800/450',
     price: 0,
     rating: 4.6,
     students: 500,
-    duration: '15h',
-    category: 'Operational',
-    description: 'Efficient stock management and inventory control.',
+    duration: '15 jam',
+    category: 'Operasional',
+    description: 'Manajemen stok dan kontrol inventaris yang efisien.',
   },
 ];
-
-export const CATEGORIES = ['All', 'Operational', 'Technical', 'Supervisory'];
 
 export const KMS_DATA: KMSEntry[] = [
   {
@@ -68,8 +68,8 @@ export const KMS_DATA: KMSEntry[] = [
 5. Sajikan segera selagi dingin.
 
 Tips: Gunakan es batu yang bersih dan buah yang segar untuk rasa maksimal.`,
-    category: 'Beverage',
-    author: 'Kitchen Lead',
+    category: 'Minuman',
+    author: 'Kepala Dapur',
     updatedAt: '2024-03-25'
   },
   {
@@ -84,8 +84,8 @@ Tips: Gunakan es batu yang bersih dan buah yang segar untuk rasa maksimal.`,
 5. Dinginkan sebelum ditambahkan es batu.
 
 Rahasia: Tambahkan sedikit perasan lemon untuk aroma yang lebih segar.`,
-    category: 'Beverage',
-    author: 'Barista Trainer',
+    category: 'Minuman',
+    author: 'Pelatih Barista',
     updatedAt: '2024-03-24'
   },
   {
@@ -100,8 +100,8 @@ Rahasia: Tambahkan sedikit perasan lemon untuk aroma yang lebih segar.`,
 5. Beri topping ayam cincang, pangsit goreng, dan bawang goreng.
 
 Penting: Pastikan mie tidak lembek (al dente).`,
-    category: 'Food',
-    author: 'QC Manager',
+    category: 'Makanan',
+    author: 'Manajer QC',
     updatedAt: '2024-03-23'
   }
 ];
@@ -111,21 +111,21 @@ export const LEARNING_STATS = {
   inProgress: 5,
   totalHours: 156,
   khs: [
-    { subject: 'MOS Module 1', grade: 'A', date: '2024-01-15' },
-    { subject: 'TOS Technical', grade: 'B+', date: '2024-02-10' },
-    { subject: 'Safety Training', grade: 'A', date: '2024-03-05' },
+    { subject: 'Modul MOS 1', grade: 'A', date: '2024-01-15' },
+    { subject: 'Teknis TOS', grade: 'B+', date: '2024-02-10' },
+    { subject: 'Pelatihan Keamanan', grade: 'A', date: '2024-03-05' },
   ]
 };
 
 export const QUIZZES: Quiz[] = [
   {
     id: 'q-mos',
-    title: 'MOS Module 1 Quiz',
+    title: 'Kuis Modul MOS 1',
     questions: [
       {
         id: '1',
-        question: 'What is the primary goal of Managerial Operational Skill (MOS)?',
-        options: ['Technical repair', 'Operational excellence', 'Customer service only', 'Stock counting'],
+        question: 'Apa tujuan utama dari Managerial Operational Skill (MOS)?',
+        options: ['Perbaikan teknis', 'Keunggulan operasional', 'Hanya layanan pelanggan', 'Penghitungan stok'],
         correctAnswer: 1
       }
     ]
@@ -136,20 +136,20 @@ export const COURSE_MODULES: Record<string, Module[]> = {
   'mos': [
     {
       id: 'm1',
-      title: 'Managerial Basics',
+      title: 'Dasar-dasar Manajerial',
       lessons: [
-        { id: 'l1', title: 'Introduction to MOS', duration: '15:00', isCompleted: false, type: 'video', videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
-        { id: 'l2', title: 'Operational Standards', duration: '20:00', isCompleted: false, type: 'reading', content: 'Operational standards are the backbone of our business...' },
-        { id: 'l3', title: 'Module 1 Quiz', duration: '05:00', isCompleted: false, type: 'quiz', quizId: 'q-mos' },
+        { id: 'l1', title: 'Pengenalan MOS', duration: '15:00', isCompleted: false, type: 'video', videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+        { id: 'l2', title: 'Standar Operasional', duration: '20:00', isCompleted: false, type: 'reading', content: 'Standar operasional adalah tulang punggung bisnis kami...' },
+        { id: 'l3', title: 'Kuis Modul 1', duration: '05:00', isCompleted: false, type: 'quiz', quizId: 'q-mos' },
       ],
     },
   ],
   'tos': [
     {
       id: 'm1',
-      title: 'Technical Skills',
+      title: 'Keterampilan Teknis',
       lessons: [
-        { id: 'l1', title: 'Equipment Maintenance', duration: '30:00', isCompleted: true, type: 'video', videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
+        { id: 'l1', title: 'Pemeliharaan Peralatan', duration: '30:00', isCompleted: true, type: 'video', videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
       ],
     },
   ],
